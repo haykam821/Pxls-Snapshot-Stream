@@ -19,8 +19,7 @@
   "license": "MIT",
   "dependencies": {
     "canvas": "^1.6.11",
-    "request": "^2.87.0",
-    "request-promise": "^4.2.2"
+    "got": "^9.2.1"
   },
   "devDependencies": {
     "eslint": "^4.19.1"
