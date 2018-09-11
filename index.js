@@ -1,5 +1,6 @@
 const Canvas = require("canvas");
 const req = require("request-promise");
+const debug = require("debug");
 
 function paletteColors(palette) {
 	return palette.map(color => {
@@ -17,6 +18,7 @@ async function makeSnapshot(opts = {}) {
 	const base = opts.base === undefined ? "https://pxls.space/" : opts.base;
 
 	const info = JSON.parse(await req(base + "info"));
+	debug("fetched board info");
 
 	const width = opts.width === undefined ? info.width : opts.width;
 	const height = opts.width === undefined ? info.height : opts.height;
@@ -29,6 +31,8 @@ async function makeSnapshot(opts = {}) {
 	const imgData = ctx.getImageData(0, 0, width, height);
 
 	const board = await req(base + "boarddata");
+	debug("fetched board data");
+	
 	const data = new Uint8Array(Buffer.from(board));
 
 	const intView = new Uint32Array(imgData.data.buffer);
