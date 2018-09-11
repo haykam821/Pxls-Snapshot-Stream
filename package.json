@@ -23,7 +23,8 @@
     "request-promise": "^4.2.2"
   },
   "devDependencies": {
-    "eslint": "^4.19.1"
+    "eslint": "^4.19.1",
+    "debug": "^4.0.0"
   },
   "repository": {
     "type": "git",
