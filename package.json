@@ -1,36 +1,36 @@
 {
-  "name": "pxls-snapshot-stream",
-  "version": "1.0.0",
-  "description": "A simple tool to get a stream for the current canvas on pxls.space.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
-    "pxls",
-    "canvas",
-    "image",
-    "png",
-    "write",
-    "stream",
-    "fs"
-  ],
-  "author": "haykam821",
-  "license": "MIT",
-  "dependencies": {
-    "canvas": "^1.6.11",
-    "request": "^2.87.0",
-    "request-promise": "^4.2.2"
-  },
-  "devDependencies": {
-    "eslint": "^4.19.1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/haykam821/Pxls-Snapshot-Stream.git"
-  },
-  "bugs": {
-    "url": "https://github.com/haykam821/Pxls-Snapshot-Stream/issues"
-  },
-  "homepage": "https://github.com/haykam821/Pxls-Snapshot-Stream#readme"
+	"name": "pxls-snapshot-stream",
+	"version": "1.0.0",
+	"description": "A simple tool to get a stream for the current canvas on pxls.space.",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [
+		"pxls",
+		"canvas",
+		"image",
+		"png",
+		"write",
+		"stream",
+		"fs"
+	],
+	"author": "haykam821",
+	"license": "MIT",
+	"dependencies": {
+		"canvas": "^1.6.11",
+		"request": "^2.87.0",
+		"request-promise": "^4.2.2"
+	},
+	"devDependencies": {
+		"eslint": "^4.19.1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/haykam821/Pxls-Snapshot-Stream.git"
+	},
+	"bugs": {
+		"url": "https://github.com/haykam821/Pxls-Snapshot-Stream/issues"
+	},
+	"homepage": "https://github.com/haykam821/Pxls-Snapshot-Stream#readme"
 }
