@@ -32,5 +32,8 @@
 	"bugs": {
 		"url": "https://github.com/haykam821/Pxls-Snapshot-Stream/issues"
 	},
-	"homepage": "https://github.com/haykam821/Pxls-Snapshot-Stream#readme"
+	"homepage": "https://github.com/haykam821/Pxls-Snapshot-Stream#readme",
+	"eslintConfig": {
+		"extends": "eslint-config-haykam"
+	}
 }
