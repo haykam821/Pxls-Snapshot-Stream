@@ -1,18 +1,36 @@
 const Canvas = require("canvas");
 const req = require("request-promise");
 
+/**
+ * Converts a CSS color palette to ARGB.
+ * @param {string[]} palette The palette as CSS-resolvable colors.
+ * @returns {number[]} The palette in ARGB.
+ */
 function paletteColors(palette) {
 	return palette.map(color => {
-		const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(color);
+		const result = /^#?([\da-f]{2})([\da-f]{2})([\da-f]{2})$/i.exec(color);
 		const rgb = {
-			red: parseInt(result[1], 16),
-			green: parseInt(result[2], 16),
 			blue: parseInt(result[3], 16),
+			green: parseInt(result[2], 16),
+			red: parseInt(result[1], 16),
 		};
-		return 0xff000000 | rgb.blue << 16 | rgb.green << 8 | rgb.red;
+		return 0xFF000000 | rgb.blue << 16 | rgb.green << 8 | rgb.red;
 	});
 }
 
+/**
+ * @typedef {Object} SnapshotOpts
+ * @property {string?} base The base URL for the API.
+ * @property {number?} width An override for the canvas width.
+ * @property {number?} height An override for the canvas height.
+ * @property {string[] | null} palette An override for the canvas palette.
+ */
+
+/**
+ * Makes a snapshot of the canvas.
+ * @param {SnapshotOpts} opts Options for the snapshot.
+ * @returns A stream of the canvas.
+ */
 async function makeSnapshot(opts = {}) {
 	const base = opts.base === undefined ? "https://pxls.space/" : opts.base;
 
