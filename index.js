@@ -51,7 +51,7 @@ async function makeSnapshot(opts = {}) {
 
 	const intView = new Uint32Array(imgData.data.buffer);
 
-	for (let index = 0; index < width * height; index++) {
+	for (let index = 0; index < width * height; index += 1) {
 		if (data[index] == 0xFF) {
 			intView[index] = 0x00000000;
 		} else {
